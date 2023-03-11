@@ -1,7 +1,7 @@
 :root {
   --gap: 4rem;
   --text-dody: 1.8rem;
-  --heading-h1: 4rem;
+  --heading-h1: clamp(2rem, 4vw, 4rem);
   --heading-item: 2.6rem;
   --image-width: 65%;
   --accordion-width: 75%;
@@ -11,7 +11,6 @@
   :root {
     --gap: 3rem;
     --text-dody: 1.6rem;
-    --heading-h1: 3rem;
     --heading-item: 2rem;
     --image-width: 90%;
     --accordion-width: 85%;
@@ -22,7 +21,6 @@
   :root {
     --gap: 2rem;
     --text-dody: 1.4rem;
-    --heading-h1: 2rem;
     --heading-item: 1.8rem;
     --image-width: 100%;
     --accordion-width: 100%;
@@ -119,19 +117,13 @@ body {
   opacity: 0.4;
 }
 
-@media (hover: hover) and (pointer: fine) {
-  .accordion:hover .accordion-item_title {
-    color: #ffffff;
-  }
-}
-
 .accordion-item_image-wrapper {
   display: block;
-  margin: 2rem auto;
+  margin: 0 auto;
   width: var(--image-width);
   max-height: 0;
   grid-column-start: 1;
-  column-span: 2;
+  grid-columns-end: 3;
   grid-row-start: 3;
   opacity: 0;
   transform-origin: top;
@@ -141,11 +133,11 @@ body {
 }
 
 .accordion-item_image {
+  padding-top: 2rem;
   width: 100%;
   height: auto;
 }
 
-.accordion-item:hover .accordion-item_image-wrapper,
 .accordion-item input:checked ~ .accordion-item_image-wrapper {
   max-height: 1000px;
   transform: scale(100%);
@@ -166,12 +158,8 @@ body {
   opacity: 0;
 }
 
-.accordion:hover .open-close {
-  opacity: 100;
-}
-
-.accordion-item:hover .open-close,
-.accordion-item input:checked ~ .open-close {
+.accordion-item input:checked ~ .open-close,
+.accordion-item input:active ~ .open-close {
   transform-origin: center;
   transform: rotate(45deg);
   opacity: 100;
@@ -187,6 +175,7 @@ body {
   border-radius: 0.5rem;
   background-color: #ffffff;
   transform-origin: center;
+  transition: background-color 500ms ease-in-out;
 }
 
 .open-close_line:first-child {
@@ -217,6 +206,38 @@ body {
   transition: color 500ms ease-in-out;
 }
 
-.link:hover {
-  color: #ffa744;
+// Hover effects
+
+@media (pointer: fine) {
+  .accordion:hover .open-close {
+    opacity: 100;
+  }
+}
+
+@media (pointer: fine) {
+  .accordion:hover .accordion-item_title {
+    color: #ffffff;
+  }
+}
+
+@media (pointer: fine) {
+  .accordion-item:hover .accordion-item_image-wrapper {
+    max-height: 1000px;
+    transform: scale(100%);
+    opacity: 100;
+  }
+}
+
+@media (pointer: fine) {
+  .accordion-item:hover .open-close {
+    transform-origin: center;
+    transform: rotate(45deg);
+    opacity: 100;
+  }
+}
+
+@media (pointer: fine) {
+  .link:hover {
+    color: #ffa744;
+  }
 }
