@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./styles.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Signika:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>CodeJam | cssBayan</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_container container">
+        <h1 class="header_title">
+          CSS Bayan: an accordion with HTML and CSS only
+        </h1>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <article class="accordion">
+          <label for="meme-1" class="accordion-item">
+            <input
+              type="radio"
+              name="memes"
+              id="meme-1"
+              checked
+              class="visually-hidden"
+            />
+            <span class="accordion-item_title">Beauty of Nature</span>
+            <span class="open-close">
+              <span class="open-close_line"></span>
+              <span class="open-close_line"></span>
+            </span>
+            <span class="accordion-item_image-wrapper">
+              <img src="./assets/flat-earth-solar-system-meme.jpg" class="accordion-item_image" />
+            </span>
+          </label>
+          <label for="meme-2" class="accordion-item">
+            <input
+              type="radio"
+              name="memes"
+              id="meme-2"
+              class="visually-hidden"
+            />
+            <span class="accordion-item_title">What makes my day</span>
+            <span class="open-close">
+              <span class="open-close_line"></span>
+              <span class="open-close_line"></span>
+            </span>
+            <span class="accordion-item_image-wrapper">
+              <img src="./assets/makes-my-day.jpg" class="accordion-item_image" />
+            </span>
+          </label>
+          <label for="meme-3" class="accordion-item">
+            <input
+              type="radio"
+              name="memes"
+              id="meme-3"
+              class="visually-hidden"
+            />
+            <span class="accordion-item_title">Ancient Greece</span>
+            <span class="open-close">
+              <span class="open-close_line"></span>
+              <span class="open-close_line"></span>
+            </span>
+            <span class="accordion-item_image-wrapper">
+              <img src="./assets/ancient-greek.jpg" class="accordion-item_image" />
+            </span>
+          </label>
+          <label for="meme-4" class="accordion-item">
+            <input
+              type="radio"
+              name="memes"
+              id="meme-4"
+              class="visually-hidden"
+            />
+            <span class="accordion-item_title">Cameras on Mars vs in a bank</span>
+            <span class="open-close">
+              <span class="open-close_line"></span>
+              <span class="open-close_line"></span>
+            </span>
+            <span class="accordion-item_image-wrapper">
+              <img src="./assets/pictures.jpg" class="accordion-item_image" />
+            </span>
+          </label>
+          <label for="meme-5" class="accordion-item">
+            <input
+              type="radio"
+              name="memes"
+              id="meme-5"
+              class="visually-hidden"
+            />
+            <span class="accordion-item_title">The Black hole truth</span>
+            <span class="open-close">
+              <span class="open-close_line"></span>
+              <span class="open-close_line"></span>
+            </span>
+            <span class="accordion-item_image-wrapper">
+              <img src="./assets/black-hole.jpg" class="accordion-item_image" />
+            </span>
+          </label>
+          <label for="meme-6" class="accordion-item">
+            <input
+              type="radio"
+              name="memes"
+              id="meme-6"
+              class="visually-hidden"
+            />
+            <span class="accordion-item_title">The nebula's attitude</span>
+            <span class="open-close">
+              <span class="open-close_line"></span>
+              <span class="open-close_line"></span>
+            </span>
+            <span class="accordion-item_image-wrapper">
+              <img src="./assets/nebula.jpg" class="accordion-item_image" />
+            </span>
+          </label>
+        </article>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer_container container">
+        <a href="https://github.com/mserykh" class="link" target="_blank" rel="noopener noreferrer">github</a>
+        <p>Made by Marie Serykh, 2023</p>
+      </div>
+    </footer>
+  </body>
+</html>
