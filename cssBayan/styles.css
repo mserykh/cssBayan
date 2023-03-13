@@ -79,6 +79,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 2rem;
   grid-template-rows: auto auto 1fr;
+  column-gap: 2rem;
   width: 100%;
   padding: 2rem 0;
   border-top: 0.1rem solid var(--transparent);
@@ -138,7 +139,7 @@ body {
 }
 
 .accordion-item input:checked ~ .accordion-item_image-wrapper {
-  max-height: 1000px;
+  max-height: 100rem;
   transform: scale(100%);
   opacity: 100;
 }
