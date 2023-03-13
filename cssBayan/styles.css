@@ -9,6 +9,7 @@
   --color-primary: #ffffff;
   --transparent: rgba(255, 255, 255, 0.3);
   --opacity-hover: 0.4;
+  --height-hover: 100rem;
 }
 
 @media (max-width: 820px) {
@@ -139,7 +140,7 @@ body {
 }
 
 .accordion-item input:checked ~ .accordion-item_image-wrapper {
-  max-height: 100rem;
+  max-height: var(--height-hover);
   transform: scale(100%);
   opacity: 100;
 }
@@ -222,7 +223,7 @@ body {
 
 @media (pointer: fine) {
   .accordion-item:hover .accordion-item_image-wrapper {
-    max-height: 1000px;
+    max-height: var(--height-hover);
     transform: scale(100%);
     opacity: 100;
   }
